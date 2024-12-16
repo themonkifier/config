@@ -1,7 +1,7 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim'
+	use('wbthomason/packer.nvim')
 
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -39,4 +39,17 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'},
 		}
 	}
+
+    use('justinmk/vim-sneak')
+    use('tpope/vim-surround')
+    use('tpope/vim-repeat')
+    use('tpope/vim-commentary')
+    use('chentoast/marks.nvim')
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+    }
+    use("m4xshen/smartcolumn.nvim")
 end)
